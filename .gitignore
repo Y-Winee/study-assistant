@@ -1,0 +1,90 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# =========================
+# Virtual Environments
+# =========================
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# PyTorch / ML Artifacts
+# =========================
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+pytorch_model*.bin
+
+models/
+checkpoints/
+outputs/
+runs/
+
+# =========================
+# Hugging Face Cache
+# =========================
+.cache/
+.cache/huggingface/
+
+# =========================
+# Testing and Coverage
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# =========================
+# Code Quality Tools
+# =========================
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# IDE / Editor
+# =========================
+.idea/
+.vscode/
+
+# =========================
+# macOS
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =========================
+# Build Artifacts
+# =========================
+build/
+dist/
+*.egg-info/
