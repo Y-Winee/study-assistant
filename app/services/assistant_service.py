@@ -89,6 +89,8 @@ class GenerationService(AssistantService):
 
             Correct Answer: [Letter]
             Explanation: [Brief explanation]
+
+            Don't add [] before and after the sentences.
             """
 
         else:
