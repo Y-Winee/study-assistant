@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ML-001",
+    "topic": "Supervised Learning",
+    "content": "Supervised learning is a machine learning approach in which a model learns from labeled training data. Each training example contains input features and a corresponding target value or label. The objective is to learn a relationship between the inputs and outputs so that the model can make predictions on new, unseen data.\n\nSupervised learning is commonly divided into two categories: classification and regression. Classification predicts discrete categories or classes. For example, an email classification model can predict whether an incoming email is spam or not spam. Regression predicts continuous numerical values. For example, a house price prediction model estimates a house's selling price based on features such as its size, location, and number of bedrooms.\n\nDuring training, the model makes predictions using the training data. A loss function measures the difference between its predictions and the actual target values. An optimization algorithm then updates the model's parameters to reduce this loss.\n\nAfter training, the model should be evaluated using unseen test data. This helps determine whether the model has learned useful patterns or simply memorized the training examples. A model that performs well on training data but poorly on unseen test data may be overfitting.",
+    "key_facts": [
+      "Supervised learning uses labeled training data.",
+      "Each training example contains input features and a corresponding target value or label.",
+      "The model learns a relationship between inputs and outputs to make predictions on unseen data.",
+      "Classification predicts discrete categories or classes.",
+      "Regression predicts continuous numerical values.",
+      "A loss function measures the difference between predictions and actual target values.",
+      "An optimization algorithm updates model parameters to reduce the loss.",
+      "The model is evaluated using unseen test data, and good training performance with poor test performance may indicate overfitting."
+    ]
+  },
+  {
+    "id": "NET-001",
+    "topic": "TCP/IP Networking",
+    "content": "TCP/IP is a communication protocol suite that allows devices to communicate over networks. It describes how data is formatted, transmitted, routed, and received. A commonly used TCP/IP model has four layers: Application, Transport, Internet, and Network Access.\n\nThe Application layer provides network services to applications, such as web browsing and email. The Transport layer supports communication between processes on different devices. Two common transport protocols are TCP and UDP. TCP is connection-oriented and provides reliable, ordered delivery. It can detect missing data and retransmit it. UDP is connectionless and does not guarantee delivery or ordering, but it has lower communication overhead and is useful for some real-time applications.\n\nThe Internet layer handles logical addressing and routing between networks. Internet Protocol (IP) addresses identify network interfaces and help route packets toward their destinations. The Network Access layer covers communication over the local network link, including how data is sent across the physical or wireless medium.\n\nThese layers work together. For example, an application creates data, transport protocols prepare it for communication, IP helps route packets across networks, and the Network Access layer sends data over the local link.",
+    "key_facts": [
+      "TCP/IP is a protocol suite that enables communication between devices over networks.",
+      "The four TCP/IP model layers described here are Application, Transport, Internet, and Network Access.",
+      "The Application layer provides network services to applications such as web browsing and email.",
+      "The Transport layer supports communication between processes on different devices.",
+      "TCP is connection-oriented and provides reliable, ordered delivery, including retransmission of missing data.",
+      "UDP is connectionless and does not guarantee delivery or ordering.",
+      "The Internet layer handles logical addressing and routing between networks.",
+      "The Network Access layer handles sending data over the local network link."
+    ]
+  },
+  {
+    "id": "AWS-001",
+    "topic": "AWS EC2, S3, and Lambda",
+    "content": "Amazon Web Services (AWS) provides cloud services that organizations can use to build and run applications. Three commonly used services are Amazon EC2, Amazon S3, and AWS Lambda. They solve different computing problems.\n\nAmazon Elastic Compute Cloud (EC2) provides virtual servers, called instances. A user chooses an instance type and configures details such as the operating system, storage, and networking. EC2 is useful when an application needs a server whose operating environment the user can configure and manage.\n\nAmazon Simple Storage Service (S3) provides object storage. Data is stored as objects in buckets. Objects can include documents, images, videos, backups, and other files. Applications can store and retrieve these objects without using S3 as a virtual server.\n\nAWS Lambda is a serverless compute service. A developer uploads code as a function, and AWS manages the servers that run it. A function can be invoked by events, such as an object being uploaded to an S3 bucket or a request arriving through an application interface. Lambda is useful for event-driven tasks where the developer does not want to manage the underlying servers.\n\nIn summary, EC2 provides configurable virtual servers, S3 provides object storage, and Lambda runs functions without requiring the developer to manage the underlying servers.",
+    "key_facts": [
+      "AWS provides cloud services for building and running applications.",
+      "Amazon EC2 provides virtual servers called instances.",
+      "With EC2, users choose an instance type and configure details such as the operating system, storage, and networking.",
+      "Amazon S3 provides object storage.",
+      "S3 stores objects in buckets, and objects can include documents, images, videos, and backups.",
+      "AWS Lambda is a serverless compute service that runs functions while AWS manages the underlying servers.",
+      "Lambda functions can be invoked by events, such as an object upload to S3.",
+      "EC2 provides configurable virtual servers, S3 provides object storage, and Lambda runs event-driven functions."
+    ]
+  },
+  {
+    "id": "DL-001",
+    "topic": "Transformer Architecture",
+    "content": "A Transformer is a neural network architecture designed to process sequences of data. It is widely used in natural language processing. Unlike recurrent neural networks, which process sequence elements step by step, Transformers use attention mechanisms to model relationships between tokens.\n\nBefore text is processed, it is divided into tokens. Each token is converted into a numerical representation called an embedding. Positional information is also added so the model can represent the order of tokens, because self-attention by itself does not encode sequence order.\n\nThe self-attention mechanism allows each token representation to incorporate information from other tokens in the sequence. In scaled dot-product attention, the model forms queries, keys, and values from the token representations. Attention scores determine how strongly a token uses information from other tokens.\n\nTransformer layers commonly include an attention sublayer and a feed-forward network. Residual connections and layer normalization are also used in common Transformer designs to support the flow and stability of information through the network. The original Transformer architecture used an encoder and a decoder. Many modern language models use a decoder-only Transformer, while other architectures may use an encoder or an encoder-decoder design.\n\nBy stacking Transformer layers, a model can build increasingly contextual representations of the input sequence. This architecture is a foundation for many modern language models.",
+    "key_facts": [
+      "A Transformer is a neural network architecture designed to process sequences and is widely used in natural language processing.",
+      "Transformers use attention mechanisms rather than processing sequence elements only step by step as recurrent neural networks do.",
+      "Text is divided into tokens, and tokens are converted into numerical embeddings.",
+      "Positional information is added to represent token order because self-attention alone does not encode sequence order.",
+      "Self-attention lets each token representation incorporate information from other tokens in the sequence.",
+      "Scaled dot-product attention uses queries, keys, and values to calculate how information from other tokens is weighted.",
+      "Common Transformer layers include attention and feed-forward sublayers, with residual connections and layer normalization.",
+      "The original Transformer used an encoder and decoder, while many modern language models use decoder-only architectures."
+    ]
+  },
+  {
+    "id": "ML-002",
+    "topic": "Model Training, Validation, and Overfitting",
+    "content": "Training a machine learning model involves adjusting its parameters so that its predictions become more useful for a task. During training, the model processes examples, produces predictions, and uses a loss function to measure prediction error. An optimization algorithm uses this loss to update the model's parameters. An epoch is one complete pass through the training dataset.\n\nData is often divided into training, validation, and test sets. The training set is used to fit the model. The validation set is used during development to compare configurations and make decisions such as selecting hyperparameters. The test set is held out and used to estimate how well the selected model performs on data it has not seen during development.\n\nOverfitting happens when a model learns details or noise specific to its training data and does not generalize well to new examples. It may achieve low training error while having much higher error on validation or test data. Underfitting happens when a model has not learned the patterns needed to perform well, so its performance is poor even on the training data.\n\nSeveral approaches can help reduce overfitting. Regularization discourages overly complex model behavior. Early stopping ends training when validation performance stops improving. Collecting more representative training data or using suitable data augmentation can also help in some tasks. These approaches should be assessed using validation data, while the test set should remain reserved for final evaluation.",
+    "key_facts": [
+      "Training adjusts model parameters to improve predictions for a task.",
+      "A loss function measures prediction error, and an optimization algorithm uses the loss to update model parameters.",
+      "An epoch is one complete pass through the training dataset.",
+      "The training set is used to fit the model.",
+      "The validation set is used during development to compare configurations and make decisions such as hyperparameter selection.",
+      "The test set is held out to estimate performance on data not seen during development.",
+      "Overfitting occurs when a model fits training-specific details or noise and generalizes poorly to new examples.",
+      "Underfitting occurs when a model has not learned the patterns needed to perform well, including on training data.",
+      "Regularization and early stopping are approaches that can help reduce overfitting.",
+      "The test set should remain reserved for final evaluation rather than repeated model-development decisions."
+    ]
+  }
+]
