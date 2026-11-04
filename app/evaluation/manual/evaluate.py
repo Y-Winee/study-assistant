@@ -1,8 +1,8 @@
 import json
 from pathlib import Path
 
-from ..model import BASE_MODEL, DEVICE, TOKENIZER
-from ..services.assistant_service import (
+from ...model import BASE_MODEL, DEVICE, TOKENIZER
+from ...services.assistant_service import (
     AssistantService,
     GenerationService,
     ResponseType,

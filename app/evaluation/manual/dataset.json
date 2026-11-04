@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ML-001",
+    "topic": "Supervised Learning",
+    "content": "Supervised learning is a machine learning approach in which a model learns from labeled training data. Each training example contains input features and a corresponding target value or label. The objective is to learn a relationship between the inputs and outputs so that the model can make predictions on new, unseen data.\n\nSupervised learning is commonly divided into two categories: classification and regression. Classification predicts discrete categories or classes. For example, an email classification model can predict whether an incoming email is spam or not spam. Regression predicts continuous numerical values. For example, a house price prediction model estimates a house's selling price based on features such as its size, location, and number of bedrooms.\n\nDuring training, the model makes predictions using the training data. A loss function measures the difference between its predictions and the actual target values. An optimization algorithm then updates the model's parameters to reduce this loss.\n\nAfter training, the model should be evaluated using unseen test data. This helps determine whether the model has learned useful patterns or simply memorized the training examples. A model that performs well on training data but poorly on unseen test data may be overfitting.",
+    "key_facts": [
+      "Supervised learning uses labeled training data.",
+      "Each training example contains input features and a corresponding target value or label.",
+      "The model learns a relationship between inputs and outputs to make predictions on unseen data.",
+      "Classification predicts discrete categories or classes.",
+      "Regression predicts continuous numerical values.",
+      "A loss function measures the difference between predictions and actual target values.",
+      "An optimization algorithm updates model parameters to reduce the loss.",
+      "The model is evaluated using unseen test data, and good training performance with poor test performance may indicate overfitting."
+    ]
+  }
+]
