@@ -32,13 +32,14 @@ class GenerationService(AssistantService):
 
         if response_type == ResponseType.summary:
             instruction = """
-            Summarize the following study material.
+            Summarize the following study material within 5 to 10 sentences.
 
             Requirements:
             - Include the important concepts.
             - Use clear and natural language.
             - Organize the summary logically.
             - Avoid unnecessary introductions and conclusions.
+            - Must have at least 5 sentences.
             """
 
         elif response_type == ResponseType.flashcard:
@@ -50,6 +51,7 @@ class GenerationService(AssistantService):
             - Focus on important concepts and definitions.
             - Keep questions and answers concise.
             - Use only information supported by the study material.
+            - Must not duplicate the same concept and definitations.
             """
 
         elif response_type == ResponseType.quizz:

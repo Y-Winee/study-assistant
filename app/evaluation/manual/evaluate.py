@@ -10,7 +10,9 @@ from ...services.assistant_service import (
 
 service: AssistantService = GenerationService()
 
-DATASET_PATH = Path(__file__).resolve().parent / "dataset.json"
+PARENT_PATH = Path(__file__).resolve().parent.parent
+
+DATASET_PATH = PARENT_PATH / "dataset.json"
 
 with open(DATASET_PATH, "r", encoding="utf-8") as file:
     dataset = json.load(file)
@@ -41,7 +43,7 @@ for data in dataset:
             "generated_output": response
         })
 
-RESULT_PATH = Path(__file__).resolve().parent / "result.json"
+RESULT_PATH = PARENT_PATH / "result.json"
 
 with open(RESULT_PATH, "w", encoding="utf-8") as file:
     json.dump(results, file, indent=4, ensure_ascii=False)
